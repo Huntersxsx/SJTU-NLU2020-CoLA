@@ -38,7 +38,7 @@ python F:/SJTU-NLU2020-CoLA/Huggingface/examples/text-classification/run_predict
 部分实验结果如下表：  
 
 | Model | Matthew's Corr  |
-| :---: | :---: | :---: |
+| :---: | :---: |
 | BERT-Base-uncased | 43.4 |
 | BERT-Base-cased | 51.8 |
 | RoBERTa-Base | 59.3 |
