@@ -1,0 +1,6 @@
+python convert_electra_tf_checkpoint_to_pytorch.py --tf_checkpoint_path=./prev_trained_model/electra_base/electra_base --electra_config_file=./prev_trained_model/electra_base/config.json --pytorch_dump_path=./prev_trained_model/electra_base/pytorch_model.bin
+
+python convert_electra_tf_checkpoint_to_pytorch.py --tf_checkpoint_path=./prev_trained_model/electra_large/electra_large --electra_config_file=./prev_trained_model/electra_large/config.json --pytorch_dump_path=./prev_trained_model/electra_large/pytorch_model.bin
+
+
+python predict_cola.py --model_type=bert --model_name_or_path=D:/PycharmProjects/NLP/electra_pytorch-master/prev_trained_model/electra_base --task_name="cola" --do_train --do_eval --do_predict --do_lower_case --data_dir=D:/PycharmProjects/Git/download_GLUE/glue_data/CoLA/ --max_seq_length=80 --per_gpu_train_batch_size=32 --per_gpu_eval_batch_size=32 --learning_rate=2e-5 --num_train_epochs=3.0 --logging_steps=268 --save_steps=268 --output_dir=D:/PycharmProjects/NLP/NLUHomework/cola_output/electra-base80-2e5-seed50/ --overwrite_output_dir --seed=50
